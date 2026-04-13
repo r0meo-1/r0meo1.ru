@@ -1,3 +1,7 @@
 [build]
 publish = "."
 
+[[redirects]]
+from = "/enjoycamp.html"
+to = "/enjoycamp.html"
+status = 200

@@ -179,6 +179,55 @@ body::after {
     animation-delay: 120ms;
 }
 
+.contact-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-strip a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid rgba(162, 61, 47, 0.16);
+    border-radius: 16px;
+    background: rgba(255, 250, 242, 0.86);
+    box-shadow: 0 10px 24px rgba(70, 40, 16, 0.08);
+    transition:
+        transform 220ms ease,
+        border-color 220ms ease,
+        background-color 220ms ease,
+        box-shadow 220ms ease;
+    animation: chipPop 0.6s ease both;
+}
+
+.contact-strip a:nth-child(1) {
+    animation-delay: 160ms;
+}
+
+.contact-strip a:nth-child(2) {
+    animation-delay: 240ms;
+}
+
+.contact-strip a:nth-child(3) {
+    animation-delay: 320ms;
+}
+
+.contact-strip a:nth-child(4) {
+    animation-delay: 400ms;
+}
+
+.contact-strip a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(162, 61, 47, 0.3);
+    background: rgba(255, 252, 247, 0.96);
+    box-shadow: 0 14px 28px rgba(70, 40, 16, 0.12);
+}
+
 .hero__tags {
     display: flex;
     flex-wrap: wrap;
@@ -522,6 +571,15 @@ body::after {
     .stack__group,
     .result-card {
         font-size: 0.98rem;
+    }
+
+    .contact-strip {
+        gap: 10px;
+    }
+
+    .contact-strip a {
+        width: 100%;
+        justify-content: center;
     }
 }
 
