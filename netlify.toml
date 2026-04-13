@@ -5,3 +5,8 @@ publish = "."
 from = "/enjoycamp.html"
 to = "/enjoycamp.html"
 status = 200
+
+[[redirects]]
+from = "/apreltour"
+to = "/apreltour/"
+status = 301

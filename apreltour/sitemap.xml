@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://apreltour.ru/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apreltour.ru/" />
+    <image:image>
+      <image:loc>https://apreltour.ru/og-image.jpg</image:loc>
+      <image:title>Апрель Тур — турагентство в Северодвинске</image:title>
+      <image:caption>Туры в Турцию, Египет, Таиланд и другие страны мира</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-turkey.png</image:loc>
+      <image:title>Туры в Турцию из Северодвинска</image:title>
+      <image:caption>Анталья, Кемер, Бодрум — отдых всё включено на побережье Средиземного моря</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-egypt.png</image:loc>
+      <image:title>Туры в Египет из Северодвинска</image:title>
+      <image:caption>Хургада и Шарм-эль-Шейх — тёплое море и коралловые рифы</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-thailand.png</image:loc>
+      <image:title>Туры в Таиланд из Северодвинска</image:title>
+      <image:caption>Пхукет, Паттайя, Самуи — экзотика и море</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-bali.png</image:loc>
+      <image:title>Туры на Бали из Северодвинска</image:title>
+      <image:caption>Остров богов: рисовые террасы, вулканы, сёрфинг</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-greece.png</image:loc>
+      <image:title>Туры в Грецию из Северодвинска</image:title>
+      <image:caption>Крит, Родос, Санторини — античная история и лазурное море</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-maldives.png</image:loc>
+      <image:title>Туры на Мальдивы из Северодвинска</image:title>
+      <image:caption>Роскошные бунгало над водой, коралловые атоллы, дайвинг</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-zanzibar.png</image:loc>
+      <image:title>Туры на Занзибар из Северодвинска</image:title>
+      <image:caption>Белоснежные пляжи Нунгви, сафари, синий океан</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-cuba.png</image:loc>
+      <image:title>Туры на Кубу из Северодвинска</image:title>
+      <image:caption>Варадеро, Гавана — Карибское море, ром, ретро-атмосфера</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-china.png</image:loc>
+      <image:title>Туры на Хайнань (Китай) из Северодвинска</image:title>
+      <image:caption>Санья — тропический рай в Южно-Китайском море</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apreltour.ru/article-dubai.png</image:loc>
+      <image:title>Туры в Дубай (ОАЭ) из Северодвинска</image:title>
+      <image:caption>Небоскрёбы, роскошные пляжи, шопинг и экскурсии</image:caption>
+    </image:image>
+  </url>
+</urlset>
