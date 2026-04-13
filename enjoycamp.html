@@ -299,6 +299,10 @@
     .case-cta span,.case-cta small{position:relative;z-index:1}
     .case-cta span{font-size:var(--text-base)}
     .case-cta small{display:block;font-size:var(--text-xs);font-weight:700;opacity:.82}
+    .case-cta-icon{position:relative;z-index:1;flex-shrink:0;width:2.5rem;height:2.5rem;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.16);backdrop-filter:blur(8px)}
+    .case-cta-icon svg{width:1.2rem;height:1.2rem;transition:transform 220ms ease}
+    .case-cta:hover .case-cta-icon svg{transform:translateX(3px) translateY(-2px) scale(1.08)}
     .case-ghost-link{display:inline-flex;align-items:center;gap:var(--space-2);padding:0.95rem 1.15rem;border-radius:999px;
       border:1px solid color-mix(in oklch,var(--color-primary) 18%,transparent);background:color-mix(in oklch,var(--color-bg) 84%,transparent);
       color:var(--color-text);text-decoration:none;font-weight:700;box-shadow:var(--shadow-sm)}
@@ -316,6 +320,28 @@
       border:1px solid color-mix(in oklch,var(--color-text) 10%,transparent);box-shadow:var(--shadow-lg);animation:panel-float 9s ease-in-out infinite}
     .case-panel::before{content:'';position:absolute;inset:auto auto -2rem -2rem;width:8rem;height:8rem;border-radius:50%;
       background:radial-gradient(circle, color-mix(in oklch,var(--color-primary) 18%,transparent), transparent 70%)}
+    .case-preview{position:relative;margin-top:var(--space-5);border-radius:1.25rem;overflow:hidden;background:#131311;
+      border:1px solid color-mix(in oklch,var(--color-primary) 18%,transparent);box-shadow:0 16px 40px oklch(0.18 0.01 80 / 0.24)}
+    .case-preview::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.18) 100%)}
+    .case-preview-top{display:flex;align-items:center;gap:6px;padding:0.85rem 1rem;background:#1d1d1a;border-bottom:1px solid rgba(255,255,255,.06)}
+    .case-preview-dot{width:10px;height:10px;border-radius:50%}
+    .case-preview-dot:nth-child(1){background:#ff6b6b}
+    .case-preview-dot:nth-child(2){background:#ffd166}
+    .case-preview-dot:nth-child(3){background:#4ecdc4}
+    .case-preview-bar{margin-left:6px;flex:1;height:1.1rem;border-radius:999px;background:rgba(255,255,255,.06)}
+    .case-preview-body{position:relative;padding:1rem;min-height:12rem;background:
+      radial-gradient(circle at 85% 18%, rgba(224,90,26,.26), transparent 22%),
+      radial-gradient(circle at 15% 85%, rgba(1,105,111,.26), transparent 24%),
+      linear-gradient(160deg,#161714,#1f211d)}
+    .case-preview-card{position:relative;padding:1rem;border-radius:1rem;background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);animation:preview-card-drift 7s ease-in-out infinite}
+    .case-preview-label{display:inline-flex;padding:0.35rem 0.65rem;border-radius:999px;background:rgba(255,255,255,.08);color:#d8d6d2;font-size:.72rem;font-weight:700}
+    .case-preview-title{margin-top:.9rem;font-family:var(--font-display);font-size:1.7rem;line-height:.95;letter-spacing:-0.04em;color:#f5f3ef}
+    .case-preview-title em{font-family:var(--font-serif);font-style:italic;color:#8bc6d0;font-weight:400}
+    .case-preview-line{margin-top:.75rem;height:0.6rem;border-radius:999px;background:rgba(255,255,255,.09)}
+    .case-preview-line.short{width:62%}
+    .case-preview-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;margin-top:1rem}
+    .case-preview-kpis span{padding:.65rem .4rem;border-radius:.9rem;background:rgba(255,255,255,.08);text-align:center;font-size:.7rem;color:#d9d7d1}
     .case-badge{display:inline-flex;align-items:center;gap:var(--space-2);padding:4px var(--space-3);border-radius:var(--radius-full);
       background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:800}
     .case-stack{margin-top:var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-2)}
@@ -328,6 +354,7 @@
     @keyframes case-cta-sheen{0%,100%{transform:translateX(-130%)} 40%,58%{transform:translateX(130%)}}
     @keyframes case-card-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-6px,0)}}
     @keyframes panel-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(.8deg)}}
+    @keyframes preview-card-drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-5px,0)}}
     @media(max-width:768px){
       .case-grid{grid-template-columns:1fr}
       .case-points{grid-template-columns:1fr}
@@ -620,6 +647,12 @@
           <p class="case-copy">Не просто упомянул сайт в резюме, а реально собрал, выложил и довёл до рабочего продакшен-сценария: домен, Netlify, GitHub, автодеплой, публикация в подпапку, проверка доступности после релиза.</p>
           <div class="case-actions">
             <a class="case-cta" href="https://r0meo1.ru/apreltour/" target="_blank" rel="noopener noreferrer">
+              <span class="case-cta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17L17 7"></path>
+                  <path d="M8 7h9v9"></path>
+                </svg>
+              </span>
               <span>
                 Открыть сайт Апрель Тур
                 <small>r0meo1.ru/apreltour</small>
@@ -648,6 +681,27 @@
         </div>
         <aside class="case-panel fade-in" data-delay="2">
           <span class="case-badge">Production case</span>
+          <div class="case-preview" aria-hidden="true">
+            <div class="case-preview-top">
+              <span class="case-preview-dot"></span>
+              <span class="case-preview-dot"></span>
+              <span class="case-preview-dot"></span>
+              <div class="case-preview-bar"></div>
+            </div>
+            <div class="case-preview-body">
+              <div class="case-preview-card">
+                <span class="case-preview-label">Aprel Tour</span>
+                <div class="case-preview-title">Туры <em>по миру</em></div>
+                <div class="case-preview-line"></div>
+                <div class="case-preview-line short"></div>
+                <div class="case-preview-kpis">
+                  <span>Домен</span>
+                  <span>Автодеплой</span>
+                  <span>Прод</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="case-stack">
             <span>GitHub</span>
             <span>Netlify</span>
